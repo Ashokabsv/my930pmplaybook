@@ -1,0 +1,11 @@
+--- 
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: deleting file 
+      file: 
+       path: /home/ansible/demofile
+       state: absent  

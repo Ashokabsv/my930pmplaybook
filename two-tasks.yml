@@ -1,0 +1,17 @@
+---
+- hosts: webservers
+  user: ansible
+  connection: ssh
+  become: yes
+
+  tasks:
+    - name: removing  package
+      yum:
+        name: httpd
+        state: absent
+
+    - name: stopping  service
+      service: 
+       name: httpd
+       state: stopped  
+          

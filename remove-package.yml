@@ -1,0 +1,9 @@
+--- 
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: removing software
+      yum:
+        name: docker
+        state: absent  

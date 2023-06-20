@@ -1,0 +1,10 @@
+--- 
+- hosts: webservers
+  become: yes
+
+  vars:
+    pkgname: httpd
+
+  tasks:
+    - name: installing software
+      action: yum name='{{pkgname}}' state=installed

@@ -1,0 +1,12 @@
+---
+- hosts: all
+  connection: ssh
+  user: ansible
+  become: yes
+
+  
+  tasks:
+    - name: installing software
+      yum:
+        name: docker
+        state: installed   

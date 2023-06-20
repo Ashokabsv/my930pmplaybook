@@ -1,0 +1,13 @@
+--- #creating directory
+- hosts: webservers
+  connection: ssh
+  become: yes
+  user: ansible
+  name: test playbook
+
+  tasks:
+    - name: creating directory
+      file:
+        path: /home/ansible/abcxyz
+        state: directory
+    
